@@ -1,6 +1,5 @@
 import { Action, MeaningEvent, ChronicleEntry } from './types.js';
 import { ExtendedWorldState } from './chronicle-pressure.js';
-import { renderNarrativeBlock } from './narrativeRenderer.js';
 
 export function formatTendency(world: ExtendedWorldState): string {
   if (!world.tendency.length) return 'none';
@@ -72,9 +71,4 @@ export function logTurn(
   } else {
     console.log('Chronicles this turn: none');
   }
-
-  // 서사 블록 출력
-  const narrative = renderNarrativeBlock(actions, meanings, chronicles);
-  console.log(narrative);
 }
-

@@ -10,7 +10,6 @@ export type ActionTag =
 
 export interface Action {
   actorId: string;
-  targetId?: string;  // 행동 대상 (선택적)
   type: ActionType;
   tags: ActionTag[];
 }
